@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XamarinAppLogin.HomePage"
+             xmlns:android="clr-namespace:Xamarin.Forms.PlatformConfiguration.AndroidSpecific;assembly=Xamarin.Forms.Core"
+             android:TabbedPage.ToolbarPlacement="Bottom"
+            BarBackgroundColor="White">
+  <!--Pages can be added as references or inline-->
+    <ContentPage Title="Home" IconImageSource="home.icon">
+
+        <Grid Margin="20" ColumnSpacing="10" RowSpacing="8.5">
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1.5*"/>
+                <RowDefinition Height="6.5*"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <StackLayout Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2">
+
+                <Label Text="FEATURED COURSE" Margin="0,0,0,10" FontSize="18" FontAttributes="Bold"/>
+                <Label Text="Strees will always be around. The trick is finding a few stress-busters you can enjoy!" Margin="0,0,0,10" FontSize="18"/>
+
+            </StackLayout>
+
+
+
+            <StackLayout  Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2"  BackgroundColor="White">
+
+                <Image Source="https://i.gyazo.com/49c986758e277ad6fa549e295886e9fe.png" WidthRequest="325" HeightRequest="180" Margin="0,30,0,0"/>
+                <Label Text="Foundations" Margin="0" HorizontalTextAlignment="Center" FontSize="35" FontAttributes="Bold" TextColor="#55535e"/>
+                <Label Text="This guided meditation for beginners course will introduce you to mindfuiness." HorizontalTextAlignment="Center" Margin="30,5,30,22.5" FontSize="17.5" LineHeight="1.25"/>
+                <Label Text="10 min" Margin="0,0,0,20" HorizontalTextAlignment="Center"/>
+
+            </StackLayout>
+
+
+
+            <Label Text="ON THE GO" FontSize="15" FontAttributes="Bold" Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="2" Margin="15,20,0,0"/>
+
+            <Label Text="After work" BackgroundColor="#e8f0e5" Grid.Column="0" Grid.Row="3" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontSize="18" FontAttributes="Bold"/>
+
+            <Label Text="Tough day" TextColor="White" Grid.Column="1" BackgroundColor="#6fb0bc" Grid.Row="3" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontSize="18" FontAttributes="Bold"/>
+
+            <Label Text="Good morning" TextColor="White" Grid.Column="0" Grid.Row="4"  BackgroundColor="#f4c797" HorizontalTextAlignment="Center" FontSize="18" FontAttributes="Bold" VerticalTextAlignment="Center"/>
+
+            <Label Text="Sleep" Grid.Column="1" Grid.Row="4" BackgroundColor="#cecfd1" HorizontalTextAlignment="Center" FontSize="18" FontAttributes="Bold" VerticalTextAlignment="Center"/>
+
+            <Label Text="Quick break" Grid.Column="0" Grid.Row="5" BackgroundColor="#9bd9d8" HorizontalTextAlignment="Center" FontSize="18" FontAttributes="Bold" VerticalTextAlignment="Center"/>
+
+            <Label Text="Big event" TextColor="White" Grid.Column="1" Grid.Row="5" BackgroundColor="#f4ad97" HorizontalTextAlignment="Center" FontSize="18" FontAttributes="Bold" VerticalTextAlignment="Center"/>
+        </Grid>
+        
+    </ContentPage>
+  <ContentPage Title="Option 1" IconImageSource="oneicon.png"/>
+  <ContentPage Title="Option 2" IconImageSource="twoicon.png"/>
+</TabbedPage>
