@@ -8402,6 +8402,9 @@ namespace XamarinAppLogin.Droid
 			// aapt resource value: 0x7F07007B
 			public const int twoicon = 2131165307;
 			
+			// aapt resource value: 0x7F07007C
+			public const int yoga = 2131165308;
+			
 			static Drawable()
 			{
 				global::Android.Runtime.ResourceIdManager.UpdateIdValues();

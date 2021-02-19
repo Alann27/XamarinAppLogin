@@ -17,14 +17,14 @@ namespace XamarinAppLogin
             InitializeComponent();
         }
 
-        private async void BtnRegister_Clicked(object sender, EventArgs e)
+        private async void OnRegisterClicked(object sender, EventArgs e)
         {
-            if (!string.IsNullOrEmpty(entEmail.Text) && !string.IsNullOrEmpty(entName.Text) &&
-                !string.IsNullOrEmpty(entPassword.Text) && !string.IsNullOrEmpty(entConfirmPassword.Text))
+            if (!string.IsNullOrEmpty(emailEntry.Text) && !string.IsNullOrEmpty(nameEntry.Text) &&
+                !string.IsNullOrEmpty(passwordEntry.Text) && !string.IsNullOrEmpty(confirmPasswordEntry.Text))
             {
-                if (entPassword.Text == entConfirmPassword.Text)
+                if (passwordEntry.Text == confirmPasswordEntry.Text)
                 {
-                    await DisplayAlert("Register", $"Bienvenido, {entName.Text}!","OK");
+                    await DisplayAlert("Register", $"Bienvenido, {nameEntry.Text}!","OK");
 
                     await Navigation.PushModalAsync(new HomePage());
                 }
@@ -32,9 +32,9 @@ namespace XamarinAppLogin
                 {
                     await DisplayAlert("Error", "Las contraseñas no coinciden, favor introducirlas nuevamente","OK");
 
-                    entPassword.Text = "";
-                    entConfirmPassword.Text = "";
-                    entPassword.Focus();
+                    passwordEntry.Text = "";
+                    confirmPasswordEntry.Text = "";
+                    passwordEntry.Focus();
                 }
             }
             else

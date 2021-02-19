@@ -17,12 +17,12 @@ namespace XamarinAppLogin
             InitializeComponent();
         }
 
-        private async void BtnAceptar_Clicked(object sender, EventArgs e)
+        private async void OnLoginClicked(object sender, EventArgs e)
         {
-            if (!string.IsNullOrEmpty(entEmail.Text) && !string.IsNullOrEmpty(entPassword.Text))
+            if (!string.IsNullOrEmpty(emailEntry.Text) && !string.IsNullOrEmpty(passwordEntry.Text))
             {
 
-                await DisplayAlert("INTEC App", $"Bienvenido, {entEmail.Text}!", "Aceptar");
+                await DisplayAlert("INTEC App", $"Bienvenido, {emailEntry.Text}!", "Aceptar");
 
                 await Navigation.PushModalAsync(new HomePage());
 
@@ -34,9 +34,9 @@ namespace XamarinAppLogin
             }
         }
 
-        private void Registro_Tapped(object sender, EventArgs e)
+        private async void OnRegisterTapped(object sender, EventArgs e)
         {
-            Navigation.PushAsync(new RegisterPage());
+            await Navigation.PushAsync(new RegisterPage());
         }
     }
 }
